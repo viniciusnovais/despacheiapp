@@ -1,0 +1,24 @@
+<resources>
+    <string name="app_name">Despachei</string>
+
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+
+    <string name="action_settings">Settings</string>
+    <string name="nome">Nome</string>
+    <string name="camera">Câmera</string>
+    <string name="galeria">Galeria</string>
+    <string name="visualizar">Visualizar</string>
+    <string name="opcoes">Opções</string>
+    <string name="name">Olá, escolha seu serviço </string>
+    <string name="ok">OK</string>
+    <string name="msg_alert">Para utilizar este aplciativo, você precisa aceitar as permissões</string>
+    <string name="link"><a href="www.despachei.co"></a>despachei.co</string>
+
+
+    <string-array name="services">
+        <item>Recorrer de multa</item>
+        <item>Licenciamento atrasado</item>
+        <item>Renovação CNH</item>
+    </string-array>
+</resources>

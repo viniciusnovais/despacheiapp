@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_camera"
+            android:icon="@drawable/user"
+            android:title="Meu Perfil" />
+        <item
+            android:id="@+id/nav_gallery"
+            android:icon="@drawable/edit"
+            android:title="Meus Pedidos" />
+
+        <item
+            android:id="@+id/nav_car"
+            android:icon="@drawable/car"
+            android:title="Meus Carros" />
+        <item
+            android:id="@+id/nav_slideshow"
+            android:icon="@drawable/inform"
+            android:title="Tutorial" />
+        <item
+            android:id="@+id/nav_manage"
+            android:icon="@drawable/ic_menu_manage"
+            android:title="Configurações" />
+
+        <item
+            android:id="@+id/nav_exit"
+            android:icon="@drawable/close"
+            android:title="Sair" />
+    </group>
+
+
+    <item android:title="Conecte-se">
+        <menu>
+            <item
+                android:id="@+id/nav_share"
+                android:icon="@drawable/ic_menu_share"
+                android:title="Compartilhar" />
+            <item
+                android:id="@+id/nav_send"
+                android:icon="@drawable/mail2"
+                android:title="Fale Conosco" />
+        </menu>
+    </item>
+
+</menu>
