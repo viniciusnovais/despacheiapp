@@ -6,12 +6,6 @@ import android.support.v4.app.FragmentPagerAdapter;
 
 import despachei.co.Fragment.ServiceFragment;
 
-/**
- * Created by SENAI on 22/10/2016.
- */
-
-
-
 public class PageAdapter extends FragmentPagerAdapter {
     private final int ABAS = 2;
     private ServiceFragment serviceFragment;

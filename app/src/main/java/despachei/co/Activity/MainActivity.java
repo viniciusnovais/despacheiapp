@@ -5,6 +5,7 @@ import android.content.DialogInterface;
 import android.content.Intent;
 
 import android.content.pm.PackageManager;
+import android.database.Cursor;
 import android.graphics.Bitmap;
 import android.net.Uri;
 import android.os.Bundle;
@@ -109,18 +110,17 @@ public class MainActivity extends AppCompatActivity
         }
     }
 
+
     @Override
-    protected void onActivityResult(int requestCode, int resultCode, Intent data) {
-        if (data != null) {
-            Bundle bundle= data.getExtras();
-            if (bundle!=null){
-                Bitmap bitmap= (Bitmap) bundle.get("data");
-                image.setImageBitmap(bitmap);
-            }
-        }
-
-    }
-
+    public void onActivityResult(int requestCode, int resultCode, Intent data) {
+                    if (data != null) {
+                        Bundle bundle = data.getExtras();
+                        if (bundle != null) {
+                            Bitmap bitmap = (Bitmap) bundle.get("data");
+                            image.setImageBitmap(bitmap);
+                        }
+                    }
+                }
         @Override
         public boolean onCreateOptionsMenu (Menu menu){
         // Inflate the menu; this adds items to the action bar if it is present.
@@ -217,14 +217,17 @@ public class MainActivity extends AppCompatActivity
     public void onStart() {
         super.onStart();
 
-        boolean ok = ContextCompat.checkSelfPermission(MainActivity.this, Manifest.permission.WRITE_EXTERNAL_STORAGE) == PackageManager.PERMISSION_GRANTED;
-
         // Se não possui permissão
         if (ContextCompat.checkSelfPermission(MainActivity.this,WRITE_EXTERNAL_STORAGE) != PackageManager.PERMISSION_GRANTED) {
                 // Solicita a permissão
-                Log.w("abre","passou");
-                ActivityCompat.requestPermissions(MainActivity.this,new String[]{WRITE_EXTERNAL_STORAGE},0);
-                Log.w("fechou","foi");
+            if (ActivityCompat.shouldShowRequestPermissionRationale(MainActivity.this,Manifest.permission.WRITE_EXTERNAL_STORAGE)) {
+                // Caso o usuário tenha negado a permissão anteriormente, e não tenha marcado o check "nunca mais mostre este alerta"
+                // Podemos mostrar um alerta explicando para o usuário porque a permissão é importante.
+            } else {
+                Log.w("abre", "entrou");
+                ActivityCompat.requestPermissions(MainActivity.this, new String[]{WRITE_EXTERNAL_STORAGE}, 0);
+                Log.w("fechou", "foi");
+            }
         } else {
             // Tudo OK, podemos prosseguir.
         }
