@@ -20,6 +20,14 @@
             android:background="@drawable/side_nav_bar"
             app:popupTheme="@style/ThemeOverlay.AppCompat.Dark" />
 
+        <android.support.design.widget.TabLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/tabLayout"
+            android:background="@drawable/side_nav_bar"
+            android:theme="@style/ThemeOverlay.AppCompat.Dark"
+            />
+
     </android.support.design.widget.AppBarLayout>
 
     <include layout="@layout/content_main" />

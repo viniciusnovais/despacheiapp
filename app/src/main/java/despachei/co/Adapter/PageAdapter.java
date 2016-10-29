@@ -3,35 +3,43 @@ package despachei.co.Adapter;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentPagerAdapter;
+import android.util.Log;
 
-import despachei.co.Fragment.ServiceFragment;
+import despachei.co.Fragment.Fragment1;
+import despachei.co.Fragment.Fragment2;
+import despachei.co.Fragment.Fragment3;
 
 public class PageAdapter extends FragmentPagerAdapter {
-    private final int ABAS = 2;
-    private ServiceFragment serviceFragment;
+    private String[] titlesFragmentTabs;
 
-    public PageAdapter(FragmentManager fm) {
+    public PageAdapter(FragmentManager fm, String[] titlesFragmentTabs) {
         super(fm);
+        this.titlesFragmentTabs=titlesFragmentTabs;
     }
 
     @Override
     public Fragment getItem(int position) {
         switch (position) {
             case 0:
-                if (serviceFragment == null) {
-                    serviceFragment = new ServiceFragment();
-                }
-                return serviceFragment;
-
+               return new Fragment1();
+            case 1:
+                return new Fragment2();
+            case 2:
+                return new Fragment3();
             default:
                 return null;
-
         }
-
     }
 
     @Override
     public int getCount() {
-        return ABAS;
+        return this.titlesFragmentTabs.length;
+    }
+
+    @Override
+    public CharSequence getPageTitle(int position) {
+        return this.titlesFragmentTabs[position];
     }
 }
+
+

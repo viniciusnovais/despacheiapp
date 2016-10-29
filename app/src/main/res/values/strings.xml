@@ -14,11 +14,12 @@
     <string name="ok">OK</string>
     <string name="msg_alert">Para utilizar este aplciativo, você precisa aceitar as permissões</string>
     <string name="link"><a href="www.despachei.co"></a>despachei.co</string>
+    <string name="msg">Por favor, Permita todos</string>
 
 
     <string-array name="services">
-        <item>Recorrer de multa</item>
-        <item>Licenciamento atrasado</item>
-        <item>Renovação CNH</item>
+        <item>Licenciameto</item>
+        <item>CNH</item>
+        <item>Multas</item>
     </string-array>
 </resources>
