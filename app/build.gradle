@@ -32,5 +32,5 @@ dependencies {
     testCompile 'junit:junit:4.12'
     compile 'com.google.android.gms:play-services-appindexing:8.4.0'
     compile files('libs/svg-android.jar')
-    compile 'com.android.support.constraint:constraint-layout:1.0.0-beta2'
+    compile 'com.android.support.constraint:constraint-layout:1.0.0-beta3'
 }

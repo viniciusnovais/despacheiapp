@@ -1,6 +1,7 @@
 package despachei.co.Activity;
 
 import android.Manifest;
+import android.content.Intent;
 import android.graphics.Color;
 import android.net.Uri;
 import android.os.Bundle;
@@ -122,6 +123,10 @@ public class MainActivity extends AbsRuntimePermission
 
         } else if (id == R.id.nav_manage) {
 
+        } else if (id == R.id.nav_share) {
+            shareIt();
+        } else if (id == R.id.nav_exit) {
+            finish();
         }
 
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
@@ -129,6 +134,14 @@ public class MainActivity extends AbsRuntimePermission
         return true;
     }
 
+    private void shareIt() {
+//sharing implementation here
+        Intent sharingIntent = new Intent(android.content.Intent.ACTION_SEND);
+        sharingIntent.setType("text/plain");
+        sharingIntent.putExtra(android.content.Intent.EXTRA_SUBJECT, "Despachei");
+        sharingIntent.putExtra(android.content.Intent.EXTRA_TEXT, "Conheça o despachei https://giovannywrp.github.io/despachei/");
+        startActivity(Intent.createChooser(sharingIntent, "Compartilhar via"));
+    }
 
     public Action getIndexApiAction() {
         Thing object = new Thing.Builder()
