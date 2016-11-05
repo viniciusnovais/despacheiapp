@@ -23,16 +23,19 @@
         <item>Multas</item>
     </string-array>
 
-    <string name="prompt_email">     Email</string>
-    <string name="prompt_password">Password</string>
+    <string name="prompt_email"> Email</string>
+    <string name="prompt_password">Senha</string>
     <string name="action_sign_in">Entrar</string>
-    <string name="action_sign_in_short">Sign in</string>
-    <string name="error_invalid_email">This email address is invalid</string>
-    <string name="error_invalid_password">This password is too short</string>
-    <string name="error_incorrect_password">This password is incorrect</string>
+    <string name="action_sign_in_short">Entra</string>
+    <string name="error_invalid_email">Email Inválido</string>
+    <string name="error_invalid_password">Está senha é muito curta</string>
+    <string name="error_incorrect_password">Senha incorreta</string>
     <string name="face">Entrar com o Facebook</string>
     <string name="error_field_required">This field is required</string>
     <string name="permission_rationale">"Contacts permissions are needed for providing email
         completions."
     </string>
+
+    <string name="entrar_conta">Entre com sua Conta</string>
+    <string name="forget_password">Esqueceu sua senha ?</string>
 </resources>

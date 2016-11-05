@@ -54,13 +54,12 @@ public class MainActivity extends AbsRuntimePermission
         setSupportActionBar(toolbar);
 
 
-
-
         tabLayout = (TabLayout) findViewById(R.id.tabLayout);
         viewPager = (ViewPager) findViewById(R.id.viewPager);
 
         viewPager.setAdapter(new PageAdapter(getSupportFragmentManager(), getResources().getStringArray(R.array.services)));
         tabLayout.setupWithViewPager(viewPager);
+
 
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(

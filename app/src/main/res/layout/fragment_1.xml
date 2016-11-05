@@ -13,6 +13,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:paddingTop="200dp"
+            android:id="@+id/imageView1"
             android:src="@drawable/license"
             android:layout_gravity="center_horizontal|center_vertical"
             android:layout_marginRight="30dp" />
@@ -22,6 +23,7 @@
             android:layout_height="wrap_content"
             android:src="@drawable/habilitacao"
             android:layout_marginLeft="30dp"
+            android:id="@+id/imageView2"
             android:paddingTop="200dp"
             android:layout_gravity="center_horizontal|center_vertical"/>
 
@@ -38,6 +40,7 @@
             android:layout_height="wrap_content"
             android:paddingTop="50dp"
             android:src="@drawable/outros"
+            android:id="@+id/imageView3"
             android:layout_gravity="center_horizontal|center_vertical"
             android:layout_marginRight="30dp" />
 
@@ -46,6 +49,7 @@
             android:layout_height="wrap_content"
             android:src="@drawable/outros"
             android:layout_marginLeft="30dp"
+            android:id="@+id/imageView4"
             android:paddingTop="50dp"
             android:layout_gravity="center_horizontal|center_vertical"/>
 
